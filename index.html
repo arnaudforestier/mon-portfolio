@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
   <title>Arnaud Forestier — Copywriter & AI CMO</title>
   <meta name="description" content="Portfolio d'Arnaud Forestier, Copywriter & AI CMO. J'explore comment construire des projets concrets grâce aux nouveaux outils IA.">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Arnaud Forestier — Copywriter & AI CMO">
   <meta property="og:description" content="Portfolio d'Arnaud Forestier, Copywriter & AI CMO. J'explore comment construire des projets concrets grâce aux nouveaux outils IA.">
-  <meta property="og:image" content="assets/images/arnaud.jpg">
+  <meta property="og:image" content="https://arnaudforestier.github.io/mon-portfolio/assets/images/arnaud.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <script>
@@ -24,33 +25,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --color-bg: #0a0a0a; --color-text: #e0e0e0; --color-heading: #ffffff;
-      --color-accent: #64ffda; --color-muted: #888888; --color-surface: #111111;
-      --color-border: #222222; --color-header-bg: rgba(10,10,10,0.85);
-      --font-main: 'Inter', sans-serif;
-    }
-    [data-theme="light"] {
-      --color-bg: #ffffff; --color-text: #1a1a1a; --color-heading: #1a1a1a;
-      --color-accent: #0d9373; --color-surface: #f5f5f5;
-      --color-header-bg: rgba(255,255,255,0.9);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background-color: var(--color-bg); color: var(--color-text); font-family: var(--font-main); }
+    body { background-color: #0a0a0a; }
+    [data-theme="light"] body { background-color: #ffffff; }
   </style>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+  <a href="#hero" class="skip-link">Aller au contenu principal</a>
+
   <header class="header">
     <div class="header__mobile-menu" aria-hidden="true">
       <ul class="mobile-menu__links">
-        <li><a href="#about"    class="mobile-menu__link">À propos</a></li>
-        <li><a href="#projects" class="mobile-menu__link">Projets</a></li>
-        <li><a href="#contact"  class="mobile-menu__link">Contact</a></li>
+        <li><a href="#about"    class="mobile-menu__link" tabindex="-1">À propos</a></li>
+        <li><a href="#projects" class="mobile-menu__link" tabindex="-1">Projets</a></li>
+        <li><a href="#contact"  class="mobile-menu__link" tabindex="-1">Contact</a></li>
         <li>
-          <a href="https://github.com/arnaudforestier" class="mobile-menu__link" target="_blank" rel="noopener noreferrer" aria-label="GitHub (ouvre dans un nouvel onglet)">GitHub</a>
+          <a href="https://github.com/arnaudforestier" class="mobile-menu__link" tabindex="-1" target="_blank" rel="noopener noreferrer" aria-label="GitHub (ouvre dans un nouvel onglet)">GitHub</a>
         </li>
       </ul>
     </div>
@@ -128,17 +120,18 @@
         <h2 class="section__label">Me contacter</h2>
         <form class="contact__form" action="#" method="post">
           <div class="form__group">
-            <label class="form__label" for="name">Nom</label>
-            <input class="form__input" type="text" id="name" name="name" autocomplete="name" required>
+            <label class="form__label" for="name">Nom<span class="form__label--required-mark" aria-hidden="true">*</span><span class="sr-only">(obligatoire)</span></label>
+            <input class="form__input" type="text" id="name" name="name" autocomplete="name" required aria-required="true">
           </div>
           <div class="form__group">
-            <label class="form__label" for="email">Email</label>
-            <input class="form__input" type="email" id="email" name="email" autocomplete="email" required>
+            <label class="form__label" for="email">Email<span class="form__label--required-mark" aria-hidden="true">*</span><span class="sr-only">(obligatoire)</span></label>
+            <input class="form__input" type="email" id="email" name="email" autocomplete="email" required aria-required="true">
           </div>
           <div class="form__group">
-            <label class="form__label" for="message">Message</label>
-            <textarea class="form__input form__input--textarea" id="message" name="message" rows="5" required></textarea>
+            <label class="form__label" for="message">Message<span class="form__label--required-mark" aria-hidden="true">*</span><span class="sr-only">(obligatoire)</span></label>
+            <textarea class="form__input form__input--textarea" id="message" name="message" rows="5" required aria-required="true"></textarea>
           </div>
+          <p id="form-status" class="form__status" role="status" aria-live="polite" aria-atomic="true"></p>
           <button class="form__btn" type="submit">Envoyer</button>
         </form>
       </div>
