@@ -44,6 +44,40 @@ mobileLinks.forEach(link => {
   });
 });
 
+// ── Projects — chargement dynamique depuis data/projects.json ─────────────────
+function renderProjects(projects) {
+  const grid = document.getElementById('projects-grid');
+  grid.innerHTML = projects.map(project => `
+    <article class="project-card">
+      <div class="project-card__banner"></div>
+      <div class="project-card__body">
+        <h3 class="project-card__title">${project.name}</h3>
+        <p class="project-card__description">${project.description}</p>
+        <ul class="project-card__tags">
+          ${project.languages.map(lang => `<li class="project-card__tag">${lang}</li>`).join('')}
+        </ul>
+        <a href="${project.url}" class="project-card__link" target="_blank" rel="noopener noreferrer">Voir le projet →</a>
+      </div>
+    </article>
+  `).join('');
+}
+
+function loadProjects() {
+  fetch('data/projects.json')
+    .then(res => {
+      if (!res.ok) throw new Error('Réponse réseau invalide');
+      return res.json();
+    })
+    .then(renderProjects)
+    .catch(() => {
+      const grid = document.getElementById('projects-grid');
+      grid.innerHTML = '<p class="projects__error">Impossible de charger les projets.</p>';
+    });
+}
+
+loadProjects();
+// ─────────────────────────────────────────────────────────────────────────────
+
 // Scroll reveal — Intersection Observer
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

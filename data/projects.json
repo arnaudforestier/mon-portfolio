@@ -1,0 +1,20 @@
+[
+  {
+    "name": "MonPortfolio",
+    "description": "Mon portfolio développeur, construit entièrement avec Claude Code.",
+    "languages": ["HTML", "CSS", "JavaScript", "Claude Code"],
+    "url": "https://github.com/arnaudforestier/mon-portfolio"
+  },
+  {
+    "name": "hello-python",
+    "description": "Script Python simple — hello world et bases du langage.",
+    "languages": ["Python"],
+    "url": "https://github.com/arnaudforestier/hello-python"
+  },
+  {
+    "name": "notes-cli",
+    "description": "Outil CLI de prise de notes en ligne de commande.",
+    "languages": ["CLI"],
+    "url": "https://github.com/arnaudforestier/notes-cli"
+  }
+]
