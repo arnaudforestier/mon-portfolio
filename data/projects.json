@@ -1,20 +1,23 @@
 [
   {
-    "name": "MonPortfolio",
-    "description": "Mon portfolio développeur, construit entièrement avec Claude Code.",
-    "languages": ["HTML", "CSS", "JavaScript", "Claude Code"],
-    "url": "https://github.com/arnaudforestier/mon-portfolio"
+    "name": "mon-portfolio",
+    "description": "Portfolio développeur — site statique HTML/CSS/JS vanilla",
+    "languages": ["HTML", "CSS", "JavaScript"],
+    "url": "https://github.com/arnaudforestier/mon-portfolio",
+    "stars": 0
   },
   {
     "name": "hello-python",
-    "description": "Script Python simple — hello world et bases du langage.",
+    "description": "Script Python simple — hello world et bases du langage",
     "languages": ["Python"],
-    "url": "https://github.com/arnaudforestier/hello-python"
+    "url": "https://github.com/arnaudforestier/hello-python",
+    "stars": 0
   },
   {
     "name": "notes-cli",
-    "description": "Outil CLI de prise de notes en ligne de commande.",
+    "description": "Outil CLI de prise de notes — placeholder",
     "languages": ["CLI"],
-    "url": "https://github.com/arnaudforestier/notes-cli"
+    "url": "https://github.com/arnaudforestier/notes-cli",
+    "stars": 0
   }
 ]
