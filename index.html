@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arnaud Forestier — Copywriter & AI CMO</title>
+  <meta name="description" content="Portfolio d'Arnaud Forestier, Copywriter & AI CMO. J'explore comment construire des projets concrets grâce aux nouveaux outils IA.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arnaud Forestier — Copywriter & AI CMO">
+  <meta property="og:description" content="Portfolio d'Arnaud Forestier, Copywriter & AI CMO. J'explore comment construire des projets concrets grâce aux nouveaux outils IA.">
+  <meta property="og:image" content="assets/images/arnaud.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') ||
+              (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #0a0a0a; --color-text: #e0e0e0; --color-heading: #ffffff;
+      --color-accent: #64ffda; --color-muted: #888888; --color-surface: #111111;
+      --color-border: #222222; --color-header-bg: rgba(10,10,10,0.85);
+      --font-main: 'Inter', sans-serif;
+    }
+    [data-theme="light"] {
+      --color-bg: #ffffff; --color-text: #1a1a1a; --color-heading: #1a1a1a;
+      --color-accent: #0d9373; --color-surface: #f5f5f5;
+      --color-header-bg: rgba(255,255,255,0.9);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background-color: var(--color-bg); color: var(--color-text); font-family: var(--font-main); }
+  </style>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__mobile-menu" aria-hidden="true">
+      <ul class="mobile-menu__links">
+        <li><a href="#about"    class="mobile-menu__link">À propos</a></li>
+        <li><a href="#projects" class="mobile-menu__link">Projets</a></li>
+        <li><a href="#contact"  class="mobile-menu__link">Contact</a></li>
+        <li>
+          <a href="https://github.com/arnaudforestier" class="mobile-menu__link" target="_blank" rel="noopener noreferrer" aria-label="GitHub (ouvre dans un nouvel onglet)">GitHub</a>
+        </li>
+      </ul>
+    </div>
+    <nav class="header__nav" aria-label="Navigation principale">
+      <a href="#hero" class="header__logo">AF</a>
+      <ul class="header__links">
+        <li><a href="#about" class="header__link">À propos</a></li>
+        <li><a href="#projects" class="header__link">Projets</a></li>
+        <li><a href="#contact" class="header__link">Contact</a></li>
+        <li>
+          <a href="https://github.com/arnaudforestier" class="header__btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub (ouvre dans un nouvel onglet)">
+            GitHub
+          </a>
+        </li>
+      </ul>
+      <button class="header__theme-toggle" aria-label="Basculer le thème">
+        <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="header__hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="hero" class="hero">
+      <div class="hero__content">
+        <h1 class="hero__name">Arnaud Forestier</h1>
+        <p class="hero__title">Copywriter & AI CMO</p>
+        <p class="hero__tagline">J'explore comment construire des projets concrets grâce aux nouveaux outils IA.</p>
+        <a href="#projects" class="hero__cta">Voir mes projets</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about__inner">
+        <h2 class="section__label">À propos</h2>
+        <div class="about__grid">
+          <div class="about__photo">
+            <img src="assets/images/arnaud.jpg" alt="Arnaud Forestier" class="about__photo-img" loading="lazy" width="280" height="280">
+          </div>
+          <div class="about__text">
+            <p class="about__bio">
+              Passionné par la technologie et l'intelligence artificielle,
+              j'apprends à construire des projets concrets en utilisant les outils
+              les plus avancés du marché. Ce portfolio est lui-même construit avec
+              Claude Code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="projects__inner">
+        <h2 class="section__label">Mes Projets</h2>
+        <div class="projects__grid">
+
+          <article class="project-card">
+            <div class="project-card__banner"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">MonPortfolio</h3>
+              <p class="project-card__description">Mon portfolio développeur, construit entièrement avec Claude Code.</p>
+              <ul class="project-card__tags">
+                <li class="project-card__tag">HTML</li>
+                <li class="project-card__tag">CSS</li>
+                <li class="project-card__tag">JavaScript</li>
+                <li class="project-card__tag">Claude Code</li>
+              </ul>
+              <a href="#" class="project-card__link">Voir le projet →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__banner"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Calculatrice CLI</h3>
+              <p class="project-card__description">Une calculatrice en ligne de commande en Python.</p>
+              <ul class="project-card__tags">
+                <li class="project-card__tag">Python</li>
+                <li class="project-card__tag">CLI</li>
+              </ul>
+              <a href="#" class="project-card__link">Voir le projet →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__banner"></div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">API Notes</h3>
+              <p class="project-card__description">Une API REST pour gérer des notes personnelles.</p>
+              <ul class="project-card__tags">
+                <li class="project-card__tag">Node.js</li>
+                <li class="project-card__tag">Express</li>
+                <li class="project-card__tag">REST API</li>
+              </ul>
+              <a href="#" class="project-card__link">Voir le projet →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact__inner">
+        <h2 class="section__label">Me contacter</h2>
+        <form class="contact__form" action="#" method="post">
+          <div class="form__group">
+            <label class="form__label" for="name">Nom</label>
+            <input class="form__input" type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="message">Message</label>
+            <textarea class="form__input form__input--textarea" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="form__btn" type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copy">© 2026 Arnaud Forestier</p>
+    <ul class="footer__links">
+      <li>
+        <a href="https://github.com/arnaudforestier" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="GitHub (ouvre dans un nouvel onglet)">GitHub</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/arnaud-forestier777/" class="footer__link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (ouvre dans un nouvel onglet)">LinkedIn</a>
+      </li>
+    </ul>
+    <p class="footer__credit">Construit avec Claude Code</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
